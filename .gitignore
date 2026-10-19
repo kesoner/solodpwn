@@ -1,0 +1,12 @@
+# Local deployment settings and credentials
+.openai/
+.env
+.env.*
+!.env.example
+
+# Local output
+*.log
+*.tar.gz
+node_modules/
+.DS_Store
+Thumbs.db

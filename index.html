@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="全螢幕四頁翻頁：整個背景與內容如太陽由東方升起，沿弧線移動，再向西方落下。">
+  <title>東昇西落・全螢幕背景翻頁</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="navigation-shell">
+    <header>
+      <p class="eyebrow">四頁翻頁・全螢幕背景</p>
+      <h1>東昇西落</h1>
+      <p>整個背景，沿太陽的軌跡翻頁。</p>
+    </header>
+
+    <nav class="page-nav" aria-label="選擇頁面">
+      <a href="#page-1" aria-current="page">第 1 頁</a>
+      <a href="#page-2">第 2 頁</a>
+      <a href="#page-3">第 3 頁</a>
+      <a href="#page-4">第 4 頁</a>
+    </nav>
+    </div>
+
+    <div class="scene" data-background="page-1" role="region" aria-label="全螢幕東昇西落翻頁區域">
+      <section class="page" id="page-1" aria-labelledby="title-1">
+        <div class="page-content">
+          <div class="sun" aria-hidden="true"></div>
+          <p class="page-number">01 / 04・晨光</p>
+          <h2 id="title-1" tabindex="-1">第 1 頁</h2>
+          <p>每一次翻頁，都有一次升起與落下。</p>
+          <p class="description">背景與內容，一起沿太陽的軌跡翻頁。</p>
+        </div>
+        <div class="ground" aria-hidden="true"><span>東・升起</span><span>西・落下</span></div>
+      </section>
+      <section class="page" id="page-2" aria-labelledby="title-2" hidden aria-hidden="true" inert>
+        <div class="page-content">
+          <div class="sun" aria-hidden="true"></div>
+          <p class="page-number">02 / 04・晴空</p>
+          <h2 id="title-2" tabindex="-1">第 2 頁</h2>
+          <p>新的一頁，從東方的地平線升起。</p>
+          <p class="description">滿版背景沿弧線移動，內容保持直立。</p>
+        </div>
+        <div class="ground" aria-hidden="true"><span>東・升起</span><span>西・落下</span></div>
+      </section>
+      <section class="page" id="page-3" aria-labelledby="title-3" hidden aria-hidden="true" inert>
+        <div class="page-content">
+          <div class="sun" aria-hidden="true"></div>
+          <p class="page-number">03 / 04・夕照</p>
+          <h2 id="title-3" tabindex="-1">第 3 頁</h2>
+          <p>眼前的一頁，往西方緩緩落下。</p>
+          <p class="description">按「上一頁」，就能反向沿弧線返回。</p>
+        </div>
+        <div class="ground" aria-hidden="true"><span>東・升起</span><span>西・落下</span></div>
+      </section>
+      <section class="page" id="page-4" aria-labelledby="title-4" hidden aria-hidden="true" inert>
+        <div class="page-content">
+          <div class="sun" aria-hidden="true"></div>
+          <p class="page-number">04 / 04・夜色</p>
+          <h2 id="title-4" tabindex="-1">第 4 頁</h2>
+          <p>日落之後，再迎接下一次日出。</p>
+          <p class="description">再按「下一頁」，循環回到第一頁。</p>
+        </div>
+        <div class="ground" aria-hidden="true"><span>東・升起</span><span>西・落下</span></div>
+      </section>
+    </div>
+
+    <div class="navigation-footer">
+    <div class="controls">
+      <button type="button" id="previous" aria-label="上一頁">← 上一頁</button>
+      <p id="page-status" role="status" aria-live="polite" aria-atomic="true">第 1 頁，共 4 頁</p>
+      <button type="button" id="next" aria-label="下一頁">下一頁 →</button>
+    </div>
+    <p class="hint">支援頁碼、鍵盤 ← →，或在頁面上左右滑動。</p>
+    <footer>東昇西落・全螢幕翻頁範本</footer>
+    </div>
+    <noscript><p>請啟用 JavaScript，以使用沿弧線翻頁功能。</p></noscript>
+  </main>
+</body>
+</html>
+
